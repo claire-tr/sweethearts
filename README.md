@@ -1,8 +1,15 @@
 # sweethearts facebook app
 
 #DONE
+- set up django project, database, vagrant box settings and other settings
+- added database schema
 
 #TODO
+- add login view
+- add logout/deactivation view
+- add main page after login
+- add unittests
+- move hard code parameters to config files, i.e. facebook api version.
 
 # install virtualenv
 `apt-get install python3`

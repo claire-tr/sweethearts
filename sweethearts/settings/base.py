@@ -29,7 +29,6 @@ ALLOWED_HOSTS = [
     '192.168.1.100'
 ]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'authentication'
+    'authentication',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +70,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'sweethearts.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -123,3 +121,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_URL = '/login/'
+
+FACEBOOK_APP_ID = '339700986725160'
+
+FACEBOOK_APP_SECRET = ''
+
+FACEBOOK_SIGNATURE_SALT = ''
+
+FACEBOOK_OAUTH_CALLBACK = 'https://192.168.1.100:8000/oauth/facebook'
+
+FACEBOOK_OAUTH_URL = 'https://www.facebook.com/v3.3/dialog/oauth'
+
+FACEBOOK_GRAPH_API = 'https://graph.facebook.com/v3.3/oauth'
