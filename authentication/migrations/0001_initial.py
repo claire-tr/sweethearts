@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
             name='OauthUser',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('external_id', models.CharField(max_length=150)),
+                ('external_id', models.CharField(max_length=150, db_index=True)),
                 ('profile_picture', models.CharField(max_length=1024)),
                 ('access_token', models.CharField(max_length=150)),
                 ('token_expires_in', models.IntegerField()),

@@ -1,25 +1,10 @@
-"""sweethearts URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/1.11/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.conf.urls import url, include
-    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
-"""
 from django.conf.urls import url
 
-from authentication.views import login, main_page, facebook_login_callback, facebook_deactive_callback
+from authentication.views import login_page, main_page, facebook_auth_callback, facebook_de_auth_callback
 
 urlpatterns = [
     url(r'^$', main_page),
-    url(r'^login/', login),
-    url(r'^oauth/facebook', facebook_login_callback),
-    url(r'^oauth/facebook_deactive', facebook_deactive_callback),
+    url(r'^login/', login_page),
+    url(r'^oauth/facebook/authorize', facebook_auth_callback),
+    url(r'^oauth/facebook/de-auth', facebook_de_auth_callback),
 ]

@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.template.response import TemplateResponse
 
 
 @login_required
@@ -9,4 +10,7 @@ def main_page(request, template_name='main_page.html'):
     :param template_name:
     :return:
     """
-    pass
+    context = {
+        'user': request.user,
+    }
+    return TemplateResponse(request, template_name, context)

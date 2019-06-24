@@ -15,7 +15,7 @@ class OauthUser(models.Model):
     # @TODO: support multiple login source
     # app = models.ForeignKey(SocialMediaApp, on_delete=models.SET_NULL)
 
-    external_id = models.CharField(max_length=150)
+    external_id = models.CharField(max_length=150, db_index=True)
 
     profile_picture = models.CharField(max_length=1024)
 
