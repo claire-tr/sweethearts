@@ -12,5 +12,6 @@ def main_page(request, template_name='main_page.html'):
     """
     context = {
         'user': request.user,
+        'profile_pic': request.user.oauthuser_set.get().profile_picture
     }
     return TemplateResponse(request, template_name, context)
